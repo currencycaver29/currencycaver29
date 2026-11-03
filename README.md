@@ -12,18 +12,18 @@ I build and measure systems where AI meets real-world limits: slow networks, sma
 **NaturaLens** · *wildlife recognition*
 Point your phone at an animal, and NaturaLens names the species and keeps a log of what you've found. React Native app, Next.js web and a species data pipeline built on GBIF and IUCN, moving from cloud identification toward on-device inference.
 
-[Low-communication training](https://doi.org/10.5281/zenodo.23889666) · *distributed ML over bad networks*
+[Low-communication training](https://github.com/currencycaver29/lowcomm-training) · *distributed ML over bad networks*
 Training a language model across emulated regions linked by slow, lossy internet. Hierarchical aggregation with INT8 compression cut network time by 109–379× compared with standard data-parallel training.
 
 ## Research
 
-[The Token Tax on Indian Languages](https://doi.org/10.5281/zenodo.23885241) · *NLP*
+[The Token Tax on Indian Languages](https://doi.org/10.5281/zenodo.23885241) · *NLP* · [code](https://github.com/currencycaver29/indic-token-tax)
 How many more tokens the 22 scheduled Indian languages need than English, across 14 tokenizers including GPT-4o, Llama 4, Gemma 3 and Sarvam-1.
 
-[MQTT, CoAP and HTTP Under Constrained Networks](https://doi.org/10.5281/zenodo.23885253) · *IoT networking*
+[MQTT, CoAP and HTTP Under Constrained Networks](https://doi.org/10.5281/zenodo.23885253) · *IoT networking* · [code](https://github.com/currencycaver29/iot-protocol-benchmark)
 A reproducible benchmark of the three main IoT protocols under emulated 4G, 3G, 2G and lossy links, with JSON and CBOR payloads.
 
-[Does Low-Communication Training Survive Bad Networks?](https://doi.org/10.5281/zenodo.23889666) · *distributed ML*
+[Does Low-Communication Training Survive Bad Networks?](https://doi.org/10.5281/zenodo.23889666) · *distributed ML* · [code](https://github.com/currencycaver29/lowcomm-training)
 DDP vs DiLoCo vs hierarchical aggregation, measured over real TCP through a packet-level WAN emulator.
 
 ## Systems projects
