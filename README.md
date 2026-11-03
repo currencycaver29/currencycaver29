@@ -34,13 +34,22 @@ DDP vs DiLoCo vs hierarchical aggregation, measured over real TCP through a pack
 [MQTT, CoAP and HTTP Under Constrained Networks](https://doi.org/10.5281/zenodo.23885253) · *IoT networking* · [code](https://github.com/currencycaver29/iot-protocol-benchmark)
 A reproducible benchmark of the three main IoT protocols under emulated 4G, 3G, 2G and lossy links, with JSON and CBOR payloads.
 
-## Projects
+## Systems projects
 
-**IITG Buy and Sell** · *React.js, Firebase*
-A web app that lets IIT Guwahati students buy, sell or rent products within campus.
+### [bounded-mpmc-queue](https://github.com/currencycaver29/bounded-mpmc-queue) · *Rust, lock-free concurrency*
+A bounded multi-producer, multi-consumer queue that lets many threads pass data to each other without a lock.
+- Ring buffer in the style of the LMAX Disruptor: each slot carries an atomic sequence number, so threads claim slots with compare-and-swap instead of a mutex.
+- Acquire/Release memory ordering on the slot sequences, `unsafe` limited to `UnsafeCell` and `MaybeUninit`, and a `Drop` that cleans up items still in the queue.
+- No dependencies. A stress test checks the count and checksum of every item under heavy contention, and a benchmark measures throughput with 1 to 16 threads on each side at three capacities.
 
-**Library Management System** · *Flask, MySQL*
-A web app for running a library, with separate interfaces for users and librarians.
+### [Reliable recording pipeline](https://github.com/currencycaver29/Swades-AI-Hackathon) · *TypeScript, Next.js, Hono, PostgreSQL*
+A browser recorder that doesn't lose audio, even if the tab closes or the network drops mid-upload. Built at a hackathon.
+- Each chunk is saved to the browser's private file system (OPFS) before any upload, and deleted only after both the storage bucket and the database confirm it.
+- Every chunk carries a SHA-256 checksum. Failed uploads retry with exponential backoff and jitter, and each failure is logged for auditing.
+- A reconciliation step finds chunks the database acknowledged but the bucket lost, and re-sends them from OPFS. Recordings are then transcribed with Whisper or Google Cloud Speech, with automatic language detection.
 
-**SocialVerse** · *React.js, Express.js*
-A social networking platform built on an MVC architecture, with user login, connections and posts.
+### [mini-agent-orchestrator](https://github.com/currencycaver29/mini-agent-orchestrator) · *Python, FastAPI, OpenAI*
+An AI agent that turns a plain-English request like "cancel order #9921 and email me the confirmation" into a plan and carries it out. Written from scratch, without LangChain.
+- A planner turns the request into a small task graph (which step depends on which) using OpenAI, and falls back to a rule-based parser when there's no API key or the call fails.
+- An orchestrator runs the steps in order, skips any step whose dependency failed (no confirmation email for an order that wasn't cancelled) and rejects unknown tools.
+- Typed Pydantic models end to end, timing for every step, a REST API and a small web UI.
