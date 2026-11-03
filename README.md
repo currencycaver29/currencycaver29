@@ -34,13 +34,13 @@ DDP vs DiLoCo vs hierarchical aggregation, measured over real TCP through a pack
 [MQTT, CoAP and HTTP Under Constrained Networks](https://doi.org/10.5281/zenodo.23885253) · *IoT networking* · [code](https://github.com/currencycaver29/iot-protocol-benchmark)
 A reproducible benchmark of the three main IoT protocols under emulated 4G, 3G, 2G and lossy links, with JSON and CBOR payloads.
 
-## Systems projects
+## Projects
 
-[bounded-mpmc-queue](https://github.com/currencycaver29/bounded-mpmc-queue) · *Rust, lock-free*
-A bounded multi-producer multi-consumer queue on a lock-free ring buffer with atomic sequence numbers.
+**IITG Buy and Sell** · *React.js, Firebase*
+A web app that lets IIT Guwahati students buy, sell or rent products within campus.
 
-[mini-agent-orchestrator](https://github.com/currencycaver29/mini-agent-orchestrator) · *Python, FastAPI*
-An event-driven order-processing agent with hand-rolled core logic and no LangChain.
+**Library Management System** · *Flask, MySQL*
+A web app for running a library, with separate interfaces for users and librarians.
 
-[polygon-id-auth](https://github.com/currencycaver29/polygon-id-auth) · *zero-knowledge identity*
-A working identity authentication flow built on the Polygon ID JS SDK.
+**SocialVerse** · *React.js, Express.js*
+A social networking platform built on an MVC architecture, with user login, connections and posts.
