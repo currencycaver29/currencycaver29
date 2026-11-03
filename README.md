@@ -5,7 +5,7 @@ I build and measure systems where AI meets real-world limits: slow networks, sma
 > Building the model is the easy part.
 > The interesting part is measuring what happens when it meets real networks, real devices and real users.
 
-[Portfolio](https://currencycaver29.github.io/portfolio/) · [LinkedIn](https://www.linkedin.com/in/divjkarnm) · [Research papers](#research)
+[Portfolio](https://currencycaver29.github.io/portfolio/) · [LinkedIn](https://www.linkedin.com/in/divjkarnm) · [Zenodo](https://zenodo.org/search?q=metadata.creators.person_or_org.name%3A%22Karanam%2C%20Divij%22) · [Research papers](#research)
 
 ## Experience
 
