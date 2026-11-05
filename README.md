@@ -1,4 +1,4 @@
-# Divij Karanam
+# divij karanam
 
 I build and measure systems where AI meets real-world limits: slow networks, small devices and languages that tokenizers were not built for. My work covers distributed training, mobile ML, IoT networking and NLP for Indian languages.
 
